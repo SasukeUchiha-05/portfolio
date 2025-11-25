@@ -38,7 +38,10 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     color: #fff;
 }
@@ -547,6 +550,7 @@ footer i {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -558,6 +562,7 @@ footer i {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -565,12 +570,19 @@ footer i {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
@@ -578,16 +590,21 @@ footer i {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .section {
+        padding: 4rem 5%;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
         top: 70px;
         right: 0;
         width: 100%;
-        background: rgba(10, 10, 10, 0.95);
+        background: rgba(10, 10, 10, 0.98);
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-links.active {
@@ -608,6 +625,12 @@ footer i {
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .timeline::after {
@@ -631,8 +654,44 @@ footer i {
     .timeline-dot {
         left: 22px;
     }
-    
+
     .timeline-item:nth-child(even) .timeline-dot {
         left: 22px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
     }
 }
