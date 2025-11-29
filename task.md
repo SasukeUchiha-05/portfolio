@@ -9,3 +9,4 @@
 - [x] Verify and Preview <!-- id: 6 -->
 - [x] Deployment Instructions <!-- id: 7 -->
 - [x] Fix Mobile Responsiveness <!-- id: 8 -->
+- [x] Refine Hero Layout (Alignment & Spacing) <!-- id: 9 -->
